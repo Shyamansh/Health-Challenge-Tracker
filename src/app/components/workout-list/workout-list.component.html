@@ -53,6 +53,8 @@
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
 
+<p class="fine-print">Click on a person's name to view their workout chart.</p>
+
   <div class="progress-chart" *ngIf="selectedUser">
     <app-progress-chart [userName]="selectedUser"></app-progress-chart>
   </div>
