@@ -1,0 +1,104 @@
+/* workout-list.component.css */
+
+.container.workout-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-filter-container input[type="text"],
+.search-filter-container select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 48%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #d5f0fe;
+    font-weight: normal;
+}
+
+table tr {
+    background-color: #f1faff;
+}
+
+table tr:hover {
+    background-color: #e0f7fa;
+}
+
+.table-heading-group {
+    border-bottom: 2px solid #ddd;
+}
+
+.table-heading-group th {
+    background-color: #d5f0fe;
+    text-align: center;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-controls span {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.pagination-controls select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    width: auto; /* Adjust to fit content */
+}
+
+.pagination-controls button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.5rem; 
+}
+
+.pagination-controls button:hover {
+    background-color: #f0f0f0;
+}
+
+.progress-chart {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

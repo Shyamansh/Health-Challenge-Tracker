@@ -1,0 +1,59 @@
+<div class="container workout-list">
+  <h6>Workout Data</h6>
+  <div class="search-filter-container">
+    <input type="text" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search by name" />
+    <select [(ngModel)]="filterType" (change)="filter()">
+      <option value="">All</option>
+      <option value="Running">Running</option>
+      <option value="Cycling">Cycling</option>
+      <option value="Swimming">Swimming</option>
+      <option value="Yoga">Yoga</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Workouts</th>
+        <th>No. of Workouts</th>
+        <th colspan="4">Workout Time (minutes)</th>
+        <th>Total Workout Time</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Running</th>
+        <th>Cycling</th>
+        <th>Swimming</th>
+        <th>Yoga</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let workout of filteredWorkouts | paginate: { itemsPerPage: itemsPerPage, currentPage: page }" (click)="selectUser(workout.userName)">
+        <td>{{ workout.userName }}</td>
+        <td>{{ workout.workoutTypes.join(', ') }}</td>
+        <td>{{ workout.workoutTypes.length }}</td>
+        <td>{{ workout.runningTime || '-' }}</td>
+        <td>{{ workout.cyclingTime || '-' }}</td>
+        <td>{{ workout.swimmingTime || '-' }}</td>
+        <td>{{ workout.yogaTime || '-' }}</td>
+        <td>{{ workout.totalTime || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-controls">
+    <span>Items per page:</span>
+    <select [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange($event)">
+      <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }}</option>
+    </select>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+
+  <div class="progress-chart" *ngIf="selectedUser">
+    <app-progress-chart [userName]="selectedUser"></app-progress-chart>
+  </div>
+</div>

@@ -1,0 +1,152 @@
+/* Global styles */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #f4f4f9;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Container styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px; /* Added margin-bottom for spacing between components */
+}
+
+/* Form styles */
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.6em; /* Decrease font size by 40% */
+}
+
+.container form .form-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container form label {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  width: 30%; /* Adjust width for alignment */
+  margin: 0;
+}
+
+.container form input,
+.container form select {
+  padding: 8px; /* Decrease padding size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.4em; /* Decrease font size */
+  width: 70%; /* Adjust width for alignment */
+  transition: border-color 0.3s;
+}
+
+.container form input:focus,
+.container form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.container form button {
+  padding: 8px; /* Decrease padding size */
+  width: 30%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.4em; /* Decrease font size */
+  align-self: flex-start;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.container form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.container form button:active {
+  background-color: #004494;
+  transform: scale(1);
+}
+
+/* Table styles */
+.table-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Pagination styles */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-controls button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Progress chart styles */
+.progress-chart {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific spacing for components in the main container */
+.padd {
+  margin-bottom: 20px; /* Add space between components */
+}
