@@ -102,3 +102,10 @@ table tr:hover {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.fine-print {
+    font-size: 0.8rem; /* Adjusts the font size to be smaller */
+    color: #666; /* Light grey color for the fine print */
+    margin-top: 10px; /* Adds space above the note */
+    text-align: center; /* Centers the text below the table */
+  }
